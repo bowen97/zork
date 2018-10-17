@@ -5,7 +5,7 @@
 #ifndef ZORK_TRIGGER_H
 #define ZORK_TRIGGER_H
 
-#include "main.h"
+#include "header.h"
 typedef struct _owner{
     string has;
     string object;
@@ -24,7 +24,7 @@ public:
     string print;
     Status status;
     Owner owner;
-
+    vector<string> action;
     bool condition;//0 is owner 1 is status
     bool has_command;
     bool has_print;
@@ -32,6 +32,8 @@ public:
     Trigger(xml_node<>* node);
     virtual ~Trigger();
     int times;
+private:
+    bool condition_det(xml_node<>* node);
 
 };
 

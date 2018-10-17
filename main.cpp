@@ -35,13 +35,12 @@ int main(int argc, char*argv[]){
             creaturexml.push_back(top);
         }
     }
-    cout<<doc.first_node()->name()<<endl;
+    //setup for romm class
 
-    for(xml_node<>* kid= roomxml[0]->first_node();kid; kid=kid->next_sibling()){
-        cout<<kid->name()<<endl;
-        cout<<kid->value()<<endl;
-        cout<<endl;
-
+    for(int i=0;i<roomxml.size();i++){
+        Room *temp = new Room(roomxml[i]);
+        room_list.push_back(temp);
     }
+
 
 }

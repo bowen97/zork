@@ -5,20 +5,9 @@
 #ifndef ZORK_MAIN_H
 #define ZORK_MAIN_H
 
-#include <iostream>
-#include <string>
-#include <vector>
-#include <list>
-#include <fstream>
-#include <cstdlib>
-#include "rapidxml-1.13/rapidxml.hpp"
-#include "rapidxml-1.13/rapidxml_print.hpp"
-#include "rapidxml-1.13/rapidxml_utils.hpp"
+#include "header.h"
+#include "room.h"
 
-
-using namespace std;
-using namespace rapidxml;
-
-//global variables
+vector<Room*> room_list;
 
 #endif //ZORK_MAIN_H
