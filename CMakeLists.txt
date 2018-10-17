@@ -6,4 +6,10 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(zork
+        header.h
+        main.h
+        room.cpp
+        room.h
+        trigger.cpp
+        trigger.h
         main.cpp)

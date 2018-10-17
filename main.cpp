@@ -23,6 +23,7 @@ int main(int argc, char*argv[]){
 
     for(xml_node<>*top = node->first_node(); top; top=top->next_sibling()){
         if(string(top->name())==string("room")){
+
             roomxml.push_back(top);
         }
         if(string(top->name())==string("item")){
@@ -38,8 +39,9 @@ int main(int argc, char*argv[]){
     //setup for romm class
 
     for(int i=0;i<roomxml.size();i++){
-        Room *temp = new Room(roomxml[i]);
-        room_list.push_back(temp);
+//        cout<<string(roomxml[i]->first_node()->next_sibling()->name())<<endl;
+
+        room_list.push_back(new Room(roomxml[i]));
     }
 
 

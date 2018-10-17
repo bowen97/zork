@@ -30,7 +30,7 @@ public:
     bool has_print;
     bool has_action;
     Trigger(xml_node<>* node);
-    virtual ~Trigger();
+    virtual ~Trigger(){};
     int times;
 private:
     bool condition_det(xml_node<>* node);

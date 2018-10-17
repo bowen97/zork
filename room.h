@@ -25,7 +25,9 @@ class Room{
     vector<Trigger*> trigger;
 
     Room(xml_node<>* node);
+
     virtual ~Room(){};
+
 
 
 };
