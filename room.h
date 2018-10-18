@@ -5,6 +5,7 @@
 #ifndef ZORK_ROOM_H
 #define ZORK_ROOM_H
 
+#define DEBUG 1
 #include "header.h"
 #include "trigger.h"
 typedef struct _border{

@@ -5,6 +5,7 @@
 #ifndef ZORK_TRIGGER_H
 #define ZORK_TRIGGER_H
 
+
 #include "header.h"
 typedef struct _owner{
     string has;
