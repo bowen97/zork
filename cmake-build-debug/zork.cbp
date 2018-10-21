@@ -84,6 +84,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/container.cpp">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/container.h">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/creature.cpp">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/creature.h">
+			<Option target="zork"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/header.h">
 			<Option target="zork"/>
 		</Unit>

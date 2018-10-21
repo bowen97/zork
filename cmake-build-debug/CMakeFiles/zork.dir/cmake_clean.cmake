@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/zork.dir/room.cpp.o"
   "CMakeFiles/zork.dir/trigger.cpp.o"
   "CMakeFiles/zork.dir/item.cpp.o"
+  "CMakeFiles/zork.dir/container.cpp.o"
+  "CMakeFiles/zork.dir/creature.cpp.o"
   "zork.pdb"
   "zork.exe"
   "libzork.dll.a"

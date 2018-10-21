@@ -43,10 +43,20 @@ int main(int argc, char*argv[]){
 
         room_list.push_back(new Room(roomxml[i]));
     }
-
+    // set up for item class
     for(int j = 0; j < itemxml.size(); j++) {
 
         item_list.push_back(new item(itemxml[j]));
     }
 
+    // set up for container class
+    for(int j = 0; j < containerxml.size(); j++) {
+
+        container_list.push_back(new container(containerxml[j]));
+    }
+    // set up for creature class
+    for(int j = 0; j < creaturexml.size(); j++) {
+
+        creature_list.push_back(new creature(creaturexml[j]));
+    }
 }

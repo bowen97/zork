@@ -18,4 +18,4 @@ add_executable(zork
         room.h
         sample.txt.xml
         trigger.cpp
-        trigger.h item.cpp item.h)
+        trigger.h item.cpp item.h container.cpp container.h creature.cpp creature.h)

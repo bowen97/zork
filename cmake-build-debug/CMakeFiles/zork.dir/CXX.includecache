@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/container.h
+header.h
+/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/header.h
+trigger.h
+/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/trigger.h
+
+/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/creature.cpp
+creature.h
+/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/creature.h
+
+/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/creature.h
+header.h
+/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/header.h
+trigger.h
+/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/trigger.h
+
 /cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/header.h
 iostream
 -
@@ -28,10 +44,6 @@ rapidxml-1.13/rapidxml_utils.hpp
 string.h
 -
 
-/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/item.cpp
-item.h
-/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/item.h
-
 /cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/item.h
 header.h
 /cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/header.h
@@ -49,6 +61,10 @@ room.h
 /cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/room.h
 item.h
 /cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/item.h
+container.h
+/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/container.h
+creature.h
+/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/creature.h
 
 /cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/rapidxml-1.13/rapidxml.hpp
 cstdlib
@@ -79,10 +95,6 @@ fstream
 -
 stdexcept
 -
-
-/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/room.cpp
-room.h
-/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/room.h
 
 /cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/room.h
 header.h

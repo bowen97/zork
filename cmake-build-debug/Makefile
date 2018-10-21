@@ -123,6 +123,60 @@ zork/fast:
 	$(MAKE) -f CMakeFiles/zork.dir/build.make CMakeFiles/zork.dir/build
 .PHONY : zork/fast
 
+container.o: container.cpp.o
+
+.PHONY : container.o
+
+# target to build an object file
+container.cpp.o:
+	$(MAKE) -f CMakeFiles/zork.dir/build.make CMakeFiles/zork.dir/container.cpp.o
+.PHONY : container.cpp.o
+
+container.i: container.cpp.i
+
+.PHONY : container.i
+
+# target to preprocess a source file
+container.cpp.i:
+	$(MAKE) -f CMakeFiles/zork.dir/build.make CMakeFiles/zork.dir/container.cpp.i
+.PHONY : container.cpp.i
+
+container.s: container.cpp.s
+
+.PHONY : container.s
+
+# target to generate assembly for a file
+container.cpp.s:
+	$(MAKE) -f CMakeFiles/zork.dir/build.make CMakeFiles/zork.dir/container.cpp.s
+.PHONY : container.cpp.s
+
+creature.o: creature.cpp.o
+
+.PHONY : creature.o
+
+# target to build an object file
+creature.cpp.o:
+	$(MAKE) -f CMakeFiles/zork.dir/build.make CMakeFiles/zork.dir/creature.cpp.o
+.PHONY : creature.cpp.o
+
+creature.i: creature.cpp.i
+
+.PHONY : creature.i
+
+# target to preprocess a source file
+creature.cpp.i:
+	$(MAKE) -f CMakeFiles/zork.dir/build.make CMakeFiles/zork.dir/creature.cpp.i
+.PHONY : creature.cpp.i
+
+creature.s: creature.cpp.s
+
+.PHONY : creature.s
+
+# target to generate assembly for a file
+creature.cpp.s:
+	$(MAKE) -f CMakeFiles/zork.dir/build.make CMakeFiles/zork.dir/creature.cpp.s
+.PHONY : creature.cpp.s
+
 item.o: item.cpp.o
 
 .PHONY : item.o
@@ -240,6 +294,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... zork"
 	@echo "... edit_cache"
+	@echo "... container.o"
+	@echo "... container.i"
+	@echo "... container.s"
+	@echo "... creature.o"
+	@echo "... creature.i"
+	@echo "... creature.s"
 	@echo "... item.o"
 	@echo "... item.i"
 	@echo "... item.s"

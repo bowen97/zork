@@ -8,8 +8,12 @@
 #include "header.h"
 #include "room.h"
 #include "item.h"
+#include "container.h"
+#include "creature.h"
 
 vector<Room*> room_list;
 vector<item*> item_list;
+vector<container*> container_list;
+vector<creature*> creature_list;
 
 #endif //ZORK_MAIN_H
