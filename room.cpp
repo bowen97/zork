@@ -4,6 +4,7 @@
 #include "room.h"
 #define DEBUG 1
 
+
 Room::Room(xml_node<> *node) {
     xml_node<>* kid=node->first_node();
     while(kid){

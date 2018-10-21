@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="zork"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zork">
+				<Option output="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/cmake-build-debug/zork.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/."/>
+					<Add directory="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/rapidxml-1.13"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 zork"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zork/fast">
+				<Option output="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/cmake-build-debug/zork.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/."/>
+					<Add directory="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/rapidxml-1.13"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 zork/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/lyuru/Desktop/ece\ 30862/zork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/header.h">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/item.cpp">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/item.h">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/main.cpp">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/main.h">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/rapidxml-1.13/rapidxml.hpp">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/rapidxml-1.13/rapidxml_iterators.hpp">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/rapidxml-1.13/rapidxml_print.hpp">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/rapidxml-1.13/rapidxml_utils.hpp">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/room.cpp">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/room.h">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/sample.txt.xml">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/trigger.cpp">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/trigger.h">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

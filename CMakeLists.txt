@@ -4,12 +4,18 @@ project(zork)
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
+include_directories(rapidxml-1.13)
 
 add_executable(zork
+        rapidxml-1.13/rapidxml.hpp
+        rapidxml-1.13/rapidxml_iterators.hpp
+        rapidxml-1.13/rapidxml_print.hpp
+        rapidxml-1.13/rapidxml_utils.hpp
         header.h
+        main.cpp
         main.h
         room.cpp
         room.h
+        sample.txt.xml
         trigger.cpp
-        trigger.h
-        main.cpp)
+        trigger.h item.cpp item.h)

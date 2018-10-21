@@ -8,6 +8,7 @@
 #define DEBUG 1
 #include "header.h"
 #include "trigger.h"
+
 typedef struct _border{
     string name;
     string direction;

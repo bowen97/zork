@@ -36,7 +36,7 @@ int main(int argc, char*argv[]){
             creaturexml.push_back(top);
         }
     }
-    //setup for romm class
+    //setup for room class
 
     for(int i=0;i<roomxml.size();i++){
 //        cout<<string(roomxml[i]->first_node()->next_sibling()->name())<<endl;
@@ -44,5 +44,9 @@ int main(int argc, char*argv[]){
         room_list.push_back(new Room(roomxml[i]));
     }
 
+    for(int j = 0; j < itemxml.size(); j++) {
+
+        item_list.push_back(new item(itemxml[j]));
+    }
 
 }

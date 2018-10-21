@@ -7,7 +7,9 @@
 
 #include "header.h"
 #include "room.h"
+#include "item.h"
 
 vector<Room*> room_list;
+vector<item*> item_list;
 
 #endif //ZORK_MAIN_H
