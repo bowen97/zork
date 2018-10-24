@@ -5,7 +5,7 @@
 #ifndef ZORK_CONTAINER_H
 #define ZORK_CONTAINER_H
 
-#define DEBUG 1
+#define DEBUG 0
 #include "header.h"
 #include "trigger.h"
 

@@ -3,7 +3,7 @@
 //
 
 #include "creature.h"
-#define DEBUG 1
+#define DEBUG 0
 
 creature::creature(xml_node<> *node) {
     xml_node<>* kid = node->first_node();

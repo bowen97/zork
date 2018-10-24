@@ -45,6 +45,8 @@ CMakeFiles/zork.dir/main.cpp.o: ../rapidxml-1.13/rapidxml_print.hpp
 CMakeFiles/zork.dir/main.cpp.o: ../rapidxml-1.13/rapidxml_utils.hpp
 CMakeFiles/zork.dir/main.cpp.o: ../room.h
 CMakeFiles/zork.dir/main.cpp.o: ../trigger.h
+CMakeFiles/zork.dir/main.cpp.o: ../zork.cpp
+CMakeFiles/zork.dir/main.cpp.o: ../zork.h
 
 CMakeFiles/zork.dir/room.cpp.o: ../header.h
 CMakeFiles/zork.dir/room.cpp.o: ../rapidxml-1.13/rapidxml.hpp

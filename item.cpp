@@ -3,7 +3,7 @@
 //
 
 #include "item.h"
-#define DEBUG 1
+#define DEBUG 0
 
 item::item(xml_node<>* node){
     ifturnon = false;

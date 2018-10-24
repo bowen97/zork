@@ -2,7 +2,7 @@
 // Created by bowen fang on 10/16/18.
 //
 #include "room.h"
-#define DEBUG 1
+#define DEBUG 0
 
 
 Room::Room(xml_node<> *node) {

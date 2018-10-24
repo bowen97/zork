@@ -3,7 +3,7 @@
 //
 
 #include "Attack.h"
-#define DEBUG 1
+#define DEBUG 0
 
 
 Attack::Attack(xml_node<>* node){

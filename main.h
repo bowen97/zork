@@ -10,10 +10,8 @@
 #include "item.h"
 #include "container.h"
 #include "creature.h"
+#include "zork.h"
+#include "zork.cpp"
 
-vector<Room*> room_list;
-vector<item*> item_list;
-vector<container*> container_list;
-vector<creature*> creature_list;
 
 #endif //ZORK_MAIN_H

@@ -1,7 +1,7 @@
 //
 // Created by bowen fang on 10/16/18.
 //
-#define DEBUG 1
+#define DEBUG 0
 #include "trigger.h"
 Trigger::Trigger(xml_node<> *node) {
     times=0;

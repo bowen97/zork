@@ -5,7 +5,7 @@
 #ifndef ZORK_ATTACK_H
 #define ZORK_ATTACK_H
 
-#define DEBUG 1
+#define DEBUG 0
 
 #include "header.h"
 

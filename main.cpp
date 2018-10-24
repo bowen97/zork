@@ -60,6 +60,16 @@ int main(int argc, char*argv[]){
         creature_list.push_back(new creature(creaturexml[j]));
     }
 
-
+    string input;
+    bool override = false;
+    nowRoom=room_list[0];
+    cout << nowRoom->description<<endl;
+    while(true) {
+        getline(cin, input);
+        if(input=="q"){
+            break;
+        }
+        check_input(input);
+    }
 
 }
