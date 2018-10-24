@@ -123,6 +123,33 @@ zork/fast:
 	$(MAKE) -f CMakeFiles/zork.dir/build.make CMakeFiles/zork.dir/build
 .PHONY : zork/fast
 
+Attack.o: Attack.cpp.o
+
+.PHONY : Attack.o
+
+# target to build an object file
+Attack.cpp.o:
+	$(MAKE) -f CMakeFiles/zork.dir/build.make CMakeFiles/zork.dir/Attack.cpp.o
+.PHONY : Attack.cpp.o
+
+Attack.i: Attack.cpp.i
+
+.PHONY : Attack.i
+
+# target to preprocess a source file
+Attack.cpp.i:
+	$(MAKE) -f CMakeFiles/zork.dir/build.make CMakeFiles/zork.dir/Attack.cpp.i
+.PHONY : Attack.cpp.i
+
+Attack.s: Attack.cpp.s
+
+.PHONY : Attack.s
+
+# target to generate assembly for a file
+Attack.cpp.s:
+	$(MAKE) -f CMakeFiles/zork.dir/build.make CMakeFiles/zork.dir/Attack.cpp.s
+.PHONY : Attack.cpp.s
+
 container.o: container.cpp.o
 
 .PHONY : container.o
@@ -294,6 +321,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... zork"
 	@echo "... edit_cache"
+	@echo "... Attack.o"
+	@echo "... Attack.i"
+	@echo "... Attack.s"
 	@echo "... container.o"
 	@echo "... container.i"
 	@echo "... container.s"

@@ -47,12 +47,8 @@ creature::creature(xml_node<> *node) {
             }
         }
         if(!strcmp(kid->name(),"attack")){
-            attack  = kid->value();
-            if(DEBUG) {
-                cout << kid->name() << endl;
-                cout << attack << endl;
-                cout << endl;
-            }
+            attack  = new Attack(kid);
+
 
         }
         kid=kid->next_sibling();

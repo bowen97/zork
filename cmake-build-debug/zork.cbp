@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/Attack.cpp">
+			<Option target="zork"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/Attack.h">
+			<Option target="zork"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/lyuru/Desktop/ece 30862/zork/container.cpp">
 			<Option target="zork"/>
 		</Unit>

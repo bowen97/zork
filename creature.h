@@ -8,13 +8,14 @@
 #define DEBUG 1
 #include "header.h"
 #include "trigger.h"
+#include "Attack.h"
 
 class creature {
 public:
     string name;
     string status;
     string description;
-    string attack;
+    Attack* attack;
     vector<string> vulnerability;
     vector<Trigger*> trigger;
 
