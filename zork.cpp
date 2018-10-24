@@ -35,6 +35,26 @@ void check_input(string input){
             cout<<nowRoom->description<<endl;
         }
     }
+    else if(input=="i"){
+        if(inventory.size()==0){
+            cout<<"Inventory: empty"<<endl;
+        }
+        else{
+            cout << "Inventory: ";
+            int i;
+            for(i=0;i<inventory.size()-1;i++){
+                cout<< inventory[i]<<", ";
+
+            }
+            cout<<inventory[i]<<endl;
+        }
+    }
+    else if(input=="take"){
+        cout<<"What do you want to take?"<<endl;
+        take(input);
+    }
     return;
 }
+
+
 

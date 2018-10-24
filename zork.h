@@ -19,4 +19,6 @@ vector<creature*> creature_list;
 Room * nowRoom;
 
 void check_input(string input);
+vector<string> inventory;
+
 #endif //ZORK_ZORK_H
