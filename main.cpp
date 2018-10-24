@@ -59,4 +59,7 @@ int main(int argc, char*argv[]){
 
         creature_list.push_back(new creature(creaturexml[j]));
     }
+
+
+
 }
