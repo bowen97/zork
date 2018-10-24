@@ -20,5 +20,5 @@ Room * nowRoom;
 
 void check_input(string input);
 vector<string> inventory;
-
+void take(string input);
 #endif //ZORK_ZORK_H
