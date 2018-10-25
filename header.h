@@ -14,6 +14,7 @@
 #include "rapidxml-1.13/rapidxml_print.hpp"
 #include "rapidxml-1.13/rapidxml_utils.hpp"
 #include <string.h>
+#include <iterator>
 
 using namespace std;
 using namespace rapidxml;

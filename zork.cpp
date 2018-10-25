@@ -53,39 +53,41 @@ void check_input(string input){
         cout<<"What do you want to take?"<<endl;
         string newin;
         getline(cin,newin);
-//        cout<<"before take"<<endl;
-//        cout<<"inventory: ";
-//        for(int i=0;i<inventory.size();i++){
-//            cout<< inventory[i]<<" ";
-//
-//        }
-//        cout<<endl;
-//        cout<<"item: ";
-//        for(int i=0;i<(nowRoom->item).size();i++){
-//            cout<< nowRoom->item[i]<<" ";
-//
-//        }
-//        cout<<endl;
-//        cout<<endl;
-//        cout<<endl;
         take(newin);
-//        cout<<"after take"<<endl;
-//        cout<<"inventory: ";
-//        for(int i=0;i<inventory.size();i++){
-//            cout<< inventory[i]<<" ";
-//
-//        }
-//        cout<<endl;
-//        cout<<"item: ";
-//        for(int i=0;i<(nowRoom->item).size();i++){
-//            cout<< nowRoom->item[i]<<" ";
-//
-//        }
-//        cout<<endl;
+
+    }
+    else if(input.find("take")!= string::npos){
+        input.erase(0,5);
+        take(input);
+    }
+    else if(input=="drop"){
+        cout<<"What do you want to drop?"<<endl;
+        string newin;
+        getline(cin,newin);
+        drop(newin);
+
+    }
+    else if(input.find("drop")!=string::npos){
+        input.erase(0,5);
+        drop(input);
     }
     return;
 }
+void drop(string input){
+    vector<string>::iterator it = find(inventory.begin(),inventory.end(),input);
+    if(it!=inventory.end()){
+        int i = std::distance(inventory.begin(),it);
+        (nowRoom->item).push_back(input);
+        inventory.erase(inventory.begin()+i);
+        cout<<input<<" dropped."<<endl;
 
+    }
+    else{
+        cout<<"Error"<< endl;
+    }
+
+
+}
 void take(string input){
 
     for(int i=0; i<(nowRoom->item).size();i++){
