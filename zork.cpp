@@ -71,7 +71,97 @@ void check_input(string input){
         input.erase(0,5);
         drop(input);
     }
+    else if(input=="read"){
+        cout<<"What do you want to read?"<<endl;
+
+        getline(cin,input);
+        read_item(input);
+
+    }
+    else if(input.find("read") != string::npos){
+        input.erase(0,5);
+        read_item(input);
+    }
+    else if(input=="open"){
+        cout<<"What do you want to open? ";
+        getline(cin, input);
+        if(input == "exit"){
+            exit();
+        }
+        else{
+            open(input);
+        }
+
+    }
+    else if(input.find("open") != string::npos){
+        input.erase(0,5);
+        if(input == "exit"){
+            exit();
+        }
+        else{
+            open(input);
+        }
+    }
     return;
+}
+void open(string input){
+    for(int k=0;k < (nowRoom->container).size();k++) {
+        if(nowRoom->container[k]==input) {
+
+            for (int i = 0; i < container_list.size(); i++) {
+                if (container_list[i]->name == input) {
+                    if (container_list[i]->status == "locked") {
+                        cout << container_list[i]->name << " is locked." << endl;
+                        return;
+
+                    } else if ((container_list[i]->item).size() == 0) {
+                        cout << container_list[i]->name << " is empty." << endl;
+                        return;
+                    } else {
+                        cout << container_list[i]->name << " contains ";
+                        int j;
+                        for (j = 0; j < (container_list[i]->item).size() - 1; j++) {
+                            cout << container_list[i]->item[j] << ", ";
+
+                        }
+                        cout << container_list[i]->item[j] << "." << endl;
+                        return;
+                    }
+                }
+            }
+        }
+    }
+    cout<<"Error"<<endl;
+}
+void exit(){
+    if(nowRoom->type=="exit"){
+        GameFinish=true;
+        cout<<"Game Over"<<endl;
+    }
+    else {
+        cout << "Error" << endl;
+    }
+}
+
+void read_item(string input){
+    vector<string>::iterator it = find(inventory.begin(),inventory.end(),input);
+    if(it!=inventory.end()){
+        for(int i =0; i<item_list.size();i++){
+            if(item_list[i]->name==input){
+                if(item_list[i]->writing.size()!=0){
+                    cout<<item_list[i]->writing<<endl;
+                }
+                else{
+                    cout<<"Nothing written."<<endl;
+                }
+            }
+        }
+    }
+    else{
+        cout<<"Error"<<endl;
+    }
+
+
 }
 void drop(string input){
     vector<string>::iterator it = find(inventory.begin(),inventory.end(),input);
@@ -118,7 +208,6 @@ void take(string input){
         }
     }
     cout<<"Error"<<endl;
-
 
 }
 

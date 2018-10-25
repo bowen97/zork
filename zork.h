@@ -22,4 +22,8 @@ void check_input(string input);
 vector<string> inventory;
 void take(string input);
 void drop(string input);
+void read_item(string input);
+bool GameFinish= false;
+void exit();
+void open(string input);
 #endif //ZORK_ZORK_H

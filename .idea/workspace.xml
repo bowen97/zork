@@ -13,15 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ab6ecf6c-3d84-4603-b5c1-8e0182144227" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/Attack.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/Attack.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/container.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/container.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/creature.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/creature.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/item.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/item.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/room.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/room.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/trigger.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zork.dir/trigger.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.h" beforeDir="false" afterPath="$PROJECT_DIR$/header.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zork.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/zork.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zork.h" beforeDir="false" afterPath="$PROJECT_DIR$/zork.h" afterDir="false" />
     </list>
@@ -107,15 +99,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="1583" />
-          <entry key="h" value="129" />
-          <entry key="txt" value="75" />
+          <entry key="cpp" value="2589" />
+          <entry key="h" value="224" />
+          <entry key="txt" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="1712" />
-          <entry key="PLAIN_TEXT" value="75" />
+          <entry key="ObjectiveC" value="2813" />
+          <entry key="PLAIN_TEXT" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -137,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zork.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            <state relative-caret-position="375">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" selection-end-column="23" />
               <folding>
                 <element signature="e#87#106#0" expanded="true" />
               </folding>
@@ -198,8 +190,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zork.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+            <state relative-caret-position="169">
+              <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
               <folding>
                 <element signature="e#44#63#0" expanded="true" />
               </folding>
@@ -268,8 +260,8 @@
         <option value="$PROJECT_DIR$/trigger.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/main.h" />
-        <option value="$PROJECT_DIR$/zork.h" />
         <option value="$PROJECT_DIR$/header.h" />
+        <option value="$PROJECT_DIR$/zork.h" />
         <option value="$PROJECT_DIR$/zork.cpp" />
       </list>
     </option>
@@ -353,7 +345,7 @@
       <workItem from="1540081870158" duration="1195000" />
       <workItem from="1540151004076" duration="4203000" />
       <workItem from="1540338418658" duration="3935000" />
-      <workItem from="1540349690284" duration="11476000" />
+      <workItem from="1540349690284" duration="16507000" />
     </task>
     <task id="LOCAL-00001" summary="finish room moving logic">
       <created>1540352029660</created>
@@ -376,22 +368,28 @@
       <option name="project" value="LOCAL" />
       <updated>1540396177113</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finish drop">
+      <created>1540426808912</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1540426808912</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30052000" />
+    <option name="totallyTimeSpent" value="35083000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="806" height="900" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="883" height="900" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21858639" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19857313" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33012047" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.51686746" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -418,7 +416,8 @@
     <MESSAGE value="finish room moving logic" />
     <MESSAGE value="test command branch" />
     <MESSAGE value="finish take" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish take" />
+    <MESSAGE value="finish drop" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish drop" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
@@ -567,16 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zork.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding>
-            <element signature="e#87#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/header.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -587,10 +576,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zork.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="e#87#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zork.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+        <state relative-caret-position="169">
+          <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
           <folding>
             <element signature="e#44#63#0" expanded="true" />
           </folding>
