@@ -127,16 +127,104 @@ void check_input(string input){
         cout << "What do you want to attack with?"<<endl;
         getline(cin,weapon);
         attack(monster,weapon);
-
     }
-
-
-
+    else if(input.find("attack") != string::npos){
+        input.erase(0,7);
+        string monster = input.substr(0,input.find(" "));
+        string weapon = input.substr(input.find(" ")+6, input.size());
+        attack(monster,weapon);
+    }
+    else{
+        cout<<"There is no such command"<<endl;
+    }
 
     return;
 }
 void attack(string monster, string weapon){
+    vector<string>::iterator it = find(nowRoom->creature.begin(),nowRoom->creature.end(),monster);
+    if(it==nowRoom->creature.end()){
+        cout<<"There is no such monster in the room."<<endl;
+        return;
+    }
+    it = find(inventory.begin(),inventory.end(),weapon);
+    if(it == inventory.end()){
+        cout<<"You don't have this weapon"<<endl;
+        return;
+    }
+    int m_i = 0;//creature index;
+    for(int i=0;i<creature_list.size();i++){
+        if(creature_list[i]->name==monster){
+            m_i=i;
+        }
+    }
+    it = find(creature_list[m_i]->vulnerability.begin(),creature_list[m_i]->vulnerability.end(),weapon);
+    if(it != creature_list[m_i]->vulnerability.end()){
+        cout<<"You assault the "<< monster<<" with the "<< weapon<<"."<<endl;
+    }
+    else{
+        cout<<monster<<" cannot be killed by "<<weapon<<"."<<endl;
+    }
+    if(creature_list[m_i]->attack==NULL){
+        return;
+    }
+    //need to do more checking
+    if(creature_list[m_i]->attack->triggerCondition){
+        string object = creature_list[m_i]->attack->condition.object;
+        string status = creature_list[m_i]->attack->condition.status;
+        bool flag = true;
+        bool flag2 = false;
+        for(int i=0; i<item_list.size();i++){
+            if(item_list[i]->name==object){
+                flag=false;
+                flag2=item_list[i]->status==status;
+                break;
+            }
+        }
+        if(flag){
+            for(int i =0;i<room_list.size();i++){
+                if(room_list[i]->name==object){
+                    flag= false;
+                    flag2=room_list[i]->status==status;
+                    break;
+                }
+            }
+        }
+        if(flag){
+            for(int i =0;i<container_list.size();i++){
+                if(container_list[i]->name==object){
+                    flag= false;
+                    flag2=container_list[i]->status==status;
+                    break;
+                }
+            }
+        }
+        if(flag){
+            for(int i =0;i<creature_list.size();i++){
+                if(creature_list[i]->name==object){
+                    flag= false;
+                    flag2=creature_list[i]->status==status;
+                    break;
+                }
+            }
+        }
+        if(!flag2){
+            cout<<"Error"<<endl;
+            return;
+        }
 
+    }
+    if(creature_list[m_i]->attack->triggerPrint){
+        cout << "2You assault the " << monster << " with the " << weapon << "." << endl;
+        cout << creature_list[m_i]->attack->print<<endl;
+    }
+
+    if(creature_list[m_i]->attack->triggerAction){
+        for(int j = 0; j<creature_list[m_i]->attack->action.size();j++){
+           // switchAck(creature_list[m_i]->attack->action[j]);
+           cout<<"";
+
+        }
+    }
 }
 
 void turn_on(string input){
