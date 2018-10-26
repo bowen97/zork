@@ -110,11 +110,62 @@ void check_input(string input){
         put(input_item,input_container);
 
     }
+    else if(input =="turn on"){
+        cout<<"What do you want to turn on?"<<endl;
+        getline(cin,input);
+        turn_on(input);
+
+    }
+    else if(input.find("turn on") != string::npos){
+        input.erase(0,8);
+        turn_on(input);
+    }
+    else if(input == "attack"){
+        string monster,weapon;
+        cout<<"Whom do you want to attack?"<<endl;
+        getline(cin,monster);
+        cout << "What do you want to attack with?"<<endl;
+        getline(cin,weapon);
+        attack(monster,weapon);
+
+    }
+
 
 
 
     return;
 }
+void attack(string monster, string weapon){
+
+}
+
+void turn_on(string input){
+    vector<string>::iterator it = find(inventory.begin(),inventory.end(),input);
+    if(it!=inventory.end()) {
+
+        for(int j=0; j<item_list.size(); j++){
+
+            if(item_list[j]->name==input){
+
+                if(item_list[j]->ifturnon== false){
+                    cout<<"This item cannot be turned on."<<endl;
+                }
+                else{
+                    cout<<"You activate the "<< item_list[j]->name<<"."<<endl;
+                    cout<<item_list[j]->turnon.print<<endl;
+                    //call switchAck function;
+                }
+            }
+        }
+    }
+    else{
+        cout<<"You don't have such item."<<endl;
+    }
+
+
+}
+
+
 void put(string input_item, string input_container){
 
     bool flag= true;

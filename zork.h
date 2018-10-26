@@ -21,6 +21,8 @@ Room * nowRoom;
 void check_input(string input);
 vector<string> inventory;
 void put(string input_item, string input_container);
+void turn_on(string input);
+void attack(string monster, string weapon);
 void take(string input);
 void drop(string input);
 void read_item(string input);
