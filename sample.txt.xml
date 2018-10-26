@@ -76,7 +76,7 @@
   </item>
   <container>
     <name>chest</name>
-    
+    <item>explosive</item>
   </container>
   <container>
     <name>lock</name>

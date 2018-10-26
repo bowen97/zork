@@ -102,7 +102,69 @@ void check_input(string input){
             open(input);
         }
     }
+    else if(input.find("put") != string::npos){
+        input.erase(0,4);
+        string input_item=input.substr(0, input.find(" "));
+        string input_container=input.substr(input.find(" ")+4,input.size());
+
+        put(input_item,input_container);
+
+    }
+
+
+
     return;
+}
+void put(string input_item, string input_container){
+
+    bool flag= true;
+    for(int i =0; i<inventory.size();i++){
+        if(inventory[i]==input_item){//choose right item
+            //cout<<"right: "<<inventory[i]<<endl;
+
+            for(int j=0;j<nowRoom->container.size();j++){
+                if(nowRoom->container[j]==input_container){
+                    flag=false;
+                }
+            }
+            if(flag){
+                cout<<"This room has no such container."<<endl;
+                return;
+            }
+
+            for(int j=0; j< container_list.size();j++){
+                if(container_list[j]->name==input_container){//chose right container
+
+
+                    if(container_list[j]->accept.size()==0){
+                        container_list[j]->item.push_back(input_item);
+                        inventory.erase(inventory.begin()+i);
+                        cout<<"Item "<< input_item<<" added to "<<input_container<<"."<<endl;
+                        return;
+                    }
+                    else{
+                        for(int k=0; k<container_list[j]->accept.size();k++){
+                            if(container_list[j]->accept[k]==input_item){
+                                container_list[j]->item.push_back(input_item);
+
+                                inventory.erase(inventory.begin()+i);
+                                cout<<"Item "<< input_item<<" added to "<<input_container<<"."<<endl;
+                                //not sure if we need to status of the container here.
+                                return;
+                            }
+                        }
+                        cout<<container_list[j]->status<<endl;
+                        cout<<"This item cannot be accepted"<<endl;
+                        return;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+    cout<<"There is no such item"<<endl;
 }
 void open(string input){
     for(int k=0;k < (nowRoom->container).size();k++) {
