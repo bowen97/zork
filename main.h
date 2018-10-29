@@ -11,7 +11,6 @@
 #include "container.h"
 #include "creature.h"
 #include "zork.h"
-#include "zork.cpp"
 
 
 #endif //ZORK_MAIN_H

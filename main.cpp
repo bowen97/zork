@@ -65,11 +65,21 @@ int main(int argc, char*argv[]){
     nowRoom=room_list[0];
     cout << nowRoom->description<<endl;
     while(true) {
+        override = checkTrigNoArg();
+        if(GameFinish){ break;}
+        if(override){ continue; }
         getline(cin, input);
         if(input=="q"){
             break;
         }
+        override = checkTrigArg(input);
+        if(GameFinish){break;}
+        if(override){ continue; }
         check_input(input);
+        if(GameFinish) {break;}
     }
+
+    return 0;
+
 
 }
