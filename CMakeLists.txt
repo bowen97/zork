@@ -11,11 +11,20 @@ add_executable(zork
         rapidxml-1.13/rapidxml_iterators.hpp
         rapidxml-1.13/rapidxml_print.hpp
         rapidxml-1.13/rapidxml_utils.hpp
+        Attack.cpp
+        Attack.h
+        container.cpp
+        container.h
+        creature.cpp
+        creature.h
         header.h
+        item.cpp
+        item.h
         main.cpp
         main.h
         room.cpp
         room.h
         sample.txt.xml
         trigger.cpp
-        trigger.h item.cpp item.h container.cpp container.h creature.cpp creature.h Attack.cpp Attack.h)
+        trigger.h
+        zork.h)

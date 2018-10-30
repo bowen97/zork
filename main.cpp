@@ -67,6 +67,7 @@ int main(int argc, char*argv[]){
     while(true) {
         override = checkTrigNoArg();
         if(GameFinish){ break;}
+        //cout << override << endl;
         if(override){ continue; }
         getline(cin, input);
         if(input=="q"){

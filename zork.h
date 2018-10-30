@@ -29,7 +29,7 @@ void take(string input); //
 void drop(string input); //
 void read_item(string input); //
 bool GameFinish= false; //
-void exit(); // Game over
+void exit(); // game over
 void open(string input);  //
 
 
@@ -364,10 +364,18 @@ void open(string input){
     }
     cout<<"Error"<<endl;
 }
+void Gameover(){
+    GameFinish = true;
+    cout << "Victory!" << endl;
+    cout << "Game Over" << endl;
+}
+
+
+
 void exit(){
     if(nowRoom->type=="exit"){
-        GameFinish=true;
-        cout<<"Game Over"<<endl;
+        Gameover();
+        return;
     }
     else {
         cout << "Error" << endl;
@@ -397,7 +405,7 @@ void read_item(string input){
 void drop(string input){
     vector<string>::iterator it = find(inventory.begin(),inventory.end(),input);
     if(it!=inventory.end()){
-        int i = std::distance(inventory.begin(),it);
+        long i = std::distance(inventory.begin(),it);
         (nowRoom->item).push_back(input);
         inventory.erase(inventory.begin()+i);
         cout<<input<<" dropped."<<endl;
@@ -459,14 +467,14 @@ string getObjectType(string ob){
     }
     i = 0;
     for(i = 0; i<container_list.size(); i++ ){
-        if((room_list[i])->name == ob){
+        if((container_list[i])->name == ob){
             return "Container";
 
         }
     }
     i = 0;
     for(i = 0; i<creature_list.size(); i++ ){
-        if((room_list[i])->name == ob){
+        if((creature_list[i])->name == ob){
             return "Creature";
 
         }
@@ -627,7 +635,7 @@ void switchAck(string action){
         return;
     }
     if(action == "Game Over"){
-        exit();
+        Gameover();
         return;
     }
     check_input(action);
@@ -700,6 +708,7 @@ bool trig_own(Trigger* t){
                 }
             }
         }
+        //cout << i << endl;
         if(i == inventory.size()){
             if(has == "no"){
                 if(t->has_print){
@@ -712,6 +721,7 @@ bool trig_own(Trigger* t){
                         k++;
                     }
                 }
+                //cout << i << endl;
                 return true;
             }
             else{
@@ -986,13 +996,13 @@ bool checkTrigNoArg(){
     if(nowRoom->trigger.size() != 0){
         j = 0;
         for(j = 0; j < nowRoom->trigger.size();j++){
-            t = nowRoom->trigger[i];
+            t = nowRoom->trigger[j];
             if(!t->has_command){
                 if(t->type == "permanent" ||(t->type == "single" && t->times == 0)){
-                    if(t->condition == 3){
+                    if(t->condition == false){
                         roomOut = trig_own(t);
                     }
-                    else if(t->condition == 2){
+                    else if(t->condition == true){
                         roomOut = trig_stat(t);
                     }
                     if(roomOut == true){
@@ -1013,10 +1023,10 @@ bool checkTrigNoArg(){
                     t = item_list[j]->trigger[k];
                     if(!t->has_command){
                         if(t->type == "permanent" || (t->type == "single" &&t -> times == 0)){
-                            if(t->condition == 3){
+                            if(t->condition == false){
                                 itemOut = trig_own(t);
                             }
-                            else if(t->condition == 2){
+                            else if(t->condition == true){
                                 itemOut = trig_stat(t);
                             }
                             if(itemOut == true){
@@ -1040,10 +1050,10 @@ bool checkTrigNoArg(){
                     t = container_list[j]->trigger[k];
                     if(!t->has_command){
                         if(t->type == "permanent" || (t->type == "single" && t->times == 0)){
-                            if(t->condition == 3){
+                            if(t->condition == true){
                                 containerOut = trig_own(t);
                             }
-                            else if(t->condition == 2){
+                            else if(t->condition == false){
                                 containerOut = trig_stat(t);
                             }
                             if(containerOut == true){
@@ -1067,10 +1077,10 @@ bool checkTrigNoArg(){
                     t = creature_list[j]->trigger[k];
                     if(!t->has_command){
                         if(t->type == "permanent" || (t->type == "single" && t->times == 0)){
-                            if(t->condition == 3){
+                            if(t->condition == false){
                                 creatureOut =  trig_own(t);
                             }
-                            else if(t->condition == 2){
+                            else if(t->condition == true){
                                 creatureOut = trig_stat(t);
                             }
                             if(creatureOut == true){
@@ -1101,10 +1111,10 @@ bool checkTrigArg(string input){
             t = nowRoom->trigger[j];
             if(t->has_command && input == t->command){
                 if(t->type == "permanent" || (t->type == "single" && t->times == 0)){
-                    if(t->condition == 3){
+                    if(t->condition == false){
                         roomOut = trig_own(t);
                     }
-                    else if(t->condition == 2){
+                    else if(t->condition == true){
                         roomOut = trig_stat(t);
                     }
                     if(roomOut == true){
@@ -1125,10 +1135,10 @@ bool checkTrigArg(string input){
                     t = item_list[j]->trigger[k];
                     if(t->has_command && input == t->command){
                         if(t->type == "permanent"||(t->type == "single" && t->times == 0)){
-                            if(t->condition == 3){
+                            if(t->condition == false){
                                 itemOut = trig_own(t);
                             }
-                            else if(t->condition == 2){
+                            else if(t->condition == true){
                                 itemOut = trig_stat(t);
                             }
                             if(itemOut == true){
@@ -1151,10 +1161,10 @@ bool checkTrigArg(string input){
                     t = container_list[j]->trigger[k];
                     if(t->has_command && input == t->command){
                         if(t->type == "permanent" || (t->type == "single" && t->times == 0)){
-                            if(t->condition == 3){
+                            if(t->condition == false){
                                 containerOut = trig_own(t);
                             }
-                            else if(t->condition == 2){
+                            else if(t->condition == true){
                                 containerOut = trig_stat(t);
                             }
                             if(containerOut == true){
@@ -1177,10 +1187,10 @@ bool checkTrigArg(string input){
                     t = creature_list[j]->trigger[k];
                     if(t->has_command && input == t->command){
                         if(t->type == "permanent" || ( t->type =="single" &&t->times == 0)){
-                            if(t->condition == 3){
+                            if(t->condition == false){
                                 creatureOut = trig_own(t);
                             }
-                            else if(t->condition == 2){
+                            else if(t->condition == true){
                                 creatureOut = trig_stat(t);
                             }
                             if(creatureOut == true){
@@ -1192,6 +1202,7 @@ bool checkTrigArg(string input){
             }
         }
     }
+    //cout << roomOut << endl;
     return(roomOut||itemOut||containerOut||creatureOut);
 }
 
