@@ -65,7 +65,10 @@ int main(int argc, char*argv[]){
     nowRoom=room_list[0];
     cout << nowRoom->description<<endl;
     while(true) {
+        cout<<"maybe"<<endl;
+
         override = checkTrigNoArg();
+        cout << "gamefinish1" << endl;
         if(GameFinish){ break;}
         //cout << override << endl;
         if(override){ continue; }
@@ -74,9 +77,12 @@ int main(int argc, char*argv[]){
             break;
         }
         override = checkTrigArg(input);
+        cout << "gamefinish2" << endl;
         if(GameFinish){break;}
         if(override){ continue; }
+        cout << "gamefinish4: "<<GameFinish << endl;
         check_input(input);
+        cout << "gamefinish3: " <<GameFinish<< endl;
         if(GameFinish) {break;}
     }
 

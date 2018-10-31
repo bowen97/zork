@@ -374,6 +374,7 @@ void Gameover(){
 
 void exit(){
     if(nowRoom->type=="exit"){
+        cout << "exit1" << endl;
         Gameover();
         return;
     }
@@ -531,7 +532,7 @@ void Delete(string objname){
         if(room_list[i]->name == objname){
             for( j = 0; j< nowRoom->border.size(); j++) {
                 if (nowRoom->border[j]->name == objname) {
-                    nowRoom->border.erase(nowRoom->border.begin() + j);
+                    nowRoom->border.erase(nowRoom->border.begin()+j);
                     return;
 
                 }
@@ -541,9 +542,7 @@ void Delete(string objname){
     i = 0;
     for(i = 0; i < container_list.size();i++){
         if(container_list[i]->name == objname){
-            j = 0;
             for(j = 0; j<room_list.size();j++){
-                k = 0;
                 for(k = 0; k<room_list[j]->container.size();k++){
                     if(room_list[j]->container[k] == objname){
                         room_list[j]->container.erase(room_list[j]->container.begin()+k);
@@ -556,10 +555,8 @@ void Delete(string objname){
     i = 0;
     for(i = 0; i<item_list.size(); i++){
         if(item_list[i]->name == objname){
-            j = 0;
-            for(j = 0; i<room_list.size(); j++){
-                k = 0;
-                for(k = 0; k < room_list.size(); k++){
+            for(j = 0; j<room_list.size(); j++){
+                for(k = 0; k < room_list[j]->item.size(); k++){
                     if(room_list[j]->item[k] == objname){
                         room_list[j]->item.erase(room_list[j]->item.begin()+k);
                         return;
@@ -571,9 +568,7 @@ void Delete(string objname){
     i = 0;
     for(i = 0; i<creature_list.size();i++){
         if(creature_list[i]->name == objname){
-            j = 0;
             for(j = 0; j < room_list.size(); j++){
-                k = 0;
                 for(k = 0; k<room_list[j]->creature.size(); k++){
                     if(room_list[j]->creature[k] == objname){
                         room_list[j]->creature.erase(room_list[j]->creature.begin()+k);
@@ -641,7 +636,7 @@ void switchAck(string action){
     check_input(action);
 }
 
-void next_room(string input){
+/*void next_room(string input){
     int i = (nowRoom->border).size();
     int j = 0;
     while(j < i) {
@@ -665,9 +660,9 @@ void next_room(string input){
         cout << nowRoom-> description << endl;
     }
 
-}
+}*/
 
-void view_inventory(){
+/*void view_inventory(){
     int i = inventory.size();
     if(!i){
         cout << "Inventory: empty" << endl;
@@ -679,16 +674,17 @@ void view_inventory(){
         cout << inventory[j] << ", ";
     }
     cout << inventory[j] << endl;
-}
+}*/
 
 bool trig_own(Trigger* t){
     string owner = t->owner.owner;
     string has = t->owner.has;
     string object = t->owner.object;
-    int i;
+    int i = 0;
     int j;
     int k;
     if(owner == "inventory"){
+        //cout << "lol" << endl;
         for(i = 0; i < inventory.size(); i++) {
             if (inventory[i] == object) {
                 if (has == "yes") {
@@ -1093,7 +1089,7 @@ bool checkTrigNoArg(){
             }
         }
     }
-    return(roomOut||itemOut||containerOut||creatureOut);
+    return (roomOut||itemOut||containerOut||creatureOut);
 
 }
 bool checkTrigArg(string input){
@@ -1203,7 +1199,7 @@ bool checkTrigArg(string input){
         }
     }
     //cout << roomOut << endl;
-    return(roomOut||itemOut||containerOut||creatureOut);
+    return (roomOut||itemOut||containerOut||creatureOut);
 }
 
 
