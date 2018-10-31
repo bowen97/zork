@@ -65,11 +65,10 @@ int main(int argc, char*argv[]){
     nowRoom=room_list[0];
     cout << nowRoom->description<<endl;
     while(true) {
-        cout<<"maybe"<<endl;
-
+        //cout<<"maybe"<<endl;
         override = checkTrigNoArg();
-        cout << "gamefinish1" << endl;
-        if(GameFinish){ break;}
+        //cout << "gamefinish1" << endl;
+        if(endGame){ break;}
         //cout << override << endl;
         if(override){ continue; }
         getline(cin, input);
@@ -77,13 +76,13 @@ int main(int argc, char*argv[]){
             break;
         }
         override = checkTrigArg(input);
-        cout << "gamefinish2" << endl;
-        if(GameFinish){break;}
+        //cout << "gamefinish2" << endl;
+        if(endGame){break;}
         if(override){ continue; }
-        cout << "gamefinish4: "<<GameFinish << endl;
-        check_input(input);
-        cout << "gamefinish3: " <<GameFinish<< endl;
-        if(GameFinish) {break;}
+        //cout << "gamefinish4: "<<GameFinish << endl;
+        parse_input(input);
+        //cout << "gamefinish3: " <<GameFinish<< endl;
+        if(endGame) {break;}
     }
 
     return 0;

@@ -14,14 +14,14 @@
 #include "container.h"
 #include "creature.h"
 
-vector<Room*> room_list;
+/*vector<Room*> room_list;
 vector<item*> item_list;
 vector<container*> container_list;
 vector<creature*> creature_list;
 Room * nowRoom;
 vector<string> inventory;
 
-void check_input(string input); //
+//void check_input(string input); //
 void put(string input_item, string input_container); //
 void turn_on(string input); // activate
 void attack(string monster, string weapon); //
@@ -32,9 +32,160 @@ bool GameFinish= false; //
 void exit(); // game over
 void open(string input);  //
 
+void nextRoom(string input){
+    int i = (nowRoom->border).size();
+    int j = 0;
+    while(j < i) {
+        if (nowRoom->border[j]->direction == input) {
+            string newRoom = nowRoom->border[j]->name;
+            int k = 0;
+            while (k < room_list.size()) {
+                if (room_list[k]->name == newRoom) {
+                    nowRoom = room_list[k];
+                }
+                k++;
+            }
+            break;
+        }
+        j++;
+    }
+    if(j == i){
+        cout << " Can't go that way" << endl;
+    }
+    else{
+        cout << nowRoom-> description << endl;
+    }
 
+}
 
-void check_input(string input){
+void view_inventory(){
+    int i = inventory.size();
+    if(!i){
+        cout << "Inventory: empty" << endl;
+        return;
+    }
+    cout << "Inventory: ";
+    int j = 0;
+    for(j = 0; j < i-1; j++){
+        cout << inventory[j] << ", ";
+    }
+    cout << inventory[j] << endl;
+}
+
+void parse_input(string input) {
+    if(input == "s" || input == "w" || input == "n" || input == "e") {
+        nextRoom(input);
+        return;
+    }
+    if(input == "take") {
+        cout<<"What do you want to take? ";
+        getline(cin, input);
+        take(input);
+        return;
+    }
+    if(input == "i") {
+        view_inventory();
+        return;
+    }
+    if(input.find("take") != string::npos){
+        input.erase(0,5);
+        take(input);
+        return;
+    }
+    if(input.find("drop") != string::npos){
+        input.erase(0,5);
+        drop(input);
+        return;
+    }
+
+    if(input == "drop") {
+        cout<<"What do you want to drop? ";
+        getline(cin, input);
+        drop(input);
+        return;
+    }
+    if(input == "read") {
+        cout<<"What do you want to read? ";
+        getline(cin, input);
+        read_item(input);
+        return;
+    }
+    if(input.find("read") != string::npos){
+        input.erase(0,5);
+        read_item(input);
+        return;
+    }
+    if(input == "open") {
+        cout<<"What do you want to open? ";
+        getline(cin, input);
+        if(input == "exit"){
+            exit();
+            return;
+        }
+        open(input);
+        return;
+    }
+    if(input.find("open") != string::npos){
+        input.erase(0,5);
+        if(input == "exit"){
+            exit();
+            return;
+        }
+        open(input);
+        return;
+    }
+    if(input.find("put") != string::npos){
+        input.erase(0,4);
+        int space_pos = input.find(" ");
+        string put_item = input.substr(0, space_pos);
+        input.erase(0, space_pos + 4);
+        string put_into = input;
+        put(put_item, put_into);
+        return;
+    }
+    if(input == "put") {
+        cout << "What do you want to put? ";
+        getline(cin, input);
+        string put_item = input;
+        cout << "Where do you want to put in? ";
+        getline(cin, input);
+        string put_into = input;
+        put(put_item, put_into);
+        return;
+    }
+    if(input == "turn on") {
+        cout<<"What do you want to turn on? ";
+        getline(cin, input);
+        turn_on(input);
+        return;
+    }
+    if(input.find("turn on") != string::npos){
+        input.erase(0,8);
+        turn_on(input);
+        return;
+    }
+    if(input == "attack") {
+        cout << "What do you want to attack? ";
+        getline(cin, input);
+        string monster = input;
+        cout << "What do you want to attack with? ";
+        getline(cin, input);
+        string weapon = input;
+        attack(monster, weapon);
+        return;
+    }
+    if(input.find("attack") != string::npos){
+        input.erase(0,7);
+        int space_pos = input.find(" ");
+        string monster = input.substr(0, space_pos);
+        input.erase(0, space_pos + 6);
+        string weapon = input;
+        attack(monster, weapon);
+        return;
+    }
+    cout << "Error" << endl;
+}
+/*void check_input(string input){
     if(input == "n" || input=="s" || input=="w"|| input=="e"){
         bool flag=false;
         for(int i=0; i < (nowRoom->border).size();i++){
@@ -449,74 +600,54 @@ void take(string input){
     }
     cout<<"Error"<<endl;
 
-}
+}*/
+vector<Room*> room_list;
+vector<container*> container_list;
+vector<item*> item_list;
+vector<creature*> creature_list;
 
-string getObjectType(string ob){
-    int i = 0;
-    for( i = 0; i<room_list.size(); i++ ){
-        if((room_list[i])->name == ob){
-            return "Room";
-
-        }
-    }
-    i = 0;
-    for(i = 0; i<item_list.size(); i++){
-        if((item_list[i])->name == ob){
-            return "Item";
-
-        }
-    }
-    i = 0;
-    for(i = 0; i<container_list.size(); i++ ){
-        if((container_list[i])->name == ob){
-            return "Container";
-
-        }
-    }
-    i = 0;
-    for(i = 0; i<creature_list.size(); i++ ){
-        if((creature_list[i])->name == ob){
-            return "Creature";
-
-        }
-    }
-    return NULL;
-
-}
-
+vector<string> inventory;
+bool endGame = false;
+Room * nowRoom;
+void parse_input(string);
+string getObjectType(string);
 
 void Add(string obj) {
     string objname;
     string objloc;
     objname = obj.substr(0, obj.find(" to "));
     objloc = obj.substr(obj.find(" to ") + 4);
+    int i = 0;
     string objType = getObjectType(objname);
     if (objType == "Item") {
-        for (int i = 0; i < room_list.size(); i++) {
+        for (i = 0; i < room_list.size(); i++) {
             if (room_list[i]->name == objloc) {
                 room_list[i]->item.push_back(objname);
                 return;
             }
         }
-        for (int j = 0; j < container_list.size(); j++) {
-            if (container_list[j]->name == objloc) {
-                container_list[j]->item.push_back(objname);
+        i = 0;
+        for (i = 0; i < container_list.size(); i++) {
+            if (container_list[i]->name == objloc) {
+                container_list[i]->item.push_back(objname);
                 return;
             }
         }
     }
     if (objType == "Creature") {
-        for (int k = 0; k < room_list.size(); k++) {
-            if (room_list[k]->name == objloc) {
-                room_list[k]->creature.push_back(objname);
+        i = 0;
+        for (i = 0; i < room_list.size(); i++) {
+            if (room_list[i]->name == objloc) {
+                room_list[i]->creature.push_back(objname);
                 return;
             }
         }
     }
     if (objType == "Container") {
-        for (int a = 0; a < room_list.size(); a++) {
-            if (room_list[a]->name == objloc) {
-                room_list[a]->container.push_back(objname);
+        i = 0;
+        for (i = 0; i < room_list.size(); i++) {
+            if (room_list[i]->name == objloc) {
+                room_list[i]->container.push_back(objname);
                 return;
             }
         }
@@ -525,7 +656,7 @@ void Add(string obj) {
 
 
 void Delete(string objname){
-    int i = 0;
+    int i;
     int j;
     int k;
     for( i = 0; i < room_list.size(); i++){
@@ -539,7 +670,7 @@ void Delete(string objname){
             }
         }
     }
-    i = 0;
+    //i = 0;
     for(i = 0; i < container_list.size();i++){
         if(container_list[i]->name == objname){
             for(j = 0; j<room_list.size();j++){
@@ -552,7 +683,7 @@ void Delete(string objname){
             }
         }
     }
-    i = 0;
+    //i = 0;
     for(i = 0; i<item_list.size(); i++){
         if(item_list[i]->name == objname){
             for(j = 0; j<room_list.size(); j++){
@@ -565,7 +696,7 @@ void Delete(string objname){
             }
         }
     }
-    i = 0;
+    //i = 0;
     for(i = 0; i<creature_list.size();i++){
         if(creature_list[i]->name == objname){
             for(j = 0; j < room_list.size(); j++){
@@ -616,6 +747,13 @@ void Update(string obj){
     }
 }
 
+void Gameover(){
+    endGame = true;
+    cout << "Victory!" << endl;
+    cout << "Game Over" << endl;
+}
+
+
 void switchAck(string action){
     if(action.find("Add") != string::npos){
         Add(action.erase(0,4));
@@ -633,56 +771,522 @@ void switchAck(string action){
         Gameover();
         return;
     }
-    check_input(action);
+    parse_input(action);
 }
 
-/*void next_room(string input){
-    int i = (nowRoom->border).size();
-    int j = 0;
-    while(j < i) {
-        if (nowRoom->border[j]->direction == input) {
-            string newRoom = nowRoom->border[j]->name;
-            int k = 0;
-            while (k < room_list.size()) {
-                if (room_list[k]->name == newRoom) {
-                    nowRoom = room_list[k];
+void next_room(string input){
+    int i = (nowRoom -> border).size();
+    int ind = 0;
+    while(ind < i) {
+        if(nowRoom -> border[ind] -> direction == input){
+            string newroom = nowRoom -> border[ind] -> name;
+            int j = room_list.size();
+            int ind2 = 0;
+            while(ind2 < j) {
+                if(room_list[ind2] -> name == newroom){
+                    nowRoom = room_list[ind2];
                 }
-                k++;
+                ind2++;
             }
             break;
         }
-        j++;
+        ind++;
     }
-    if(j == i){
-        cout << " Can't go that way" << endl;
-    }
-    else{
-        cout << nowRoom-> description << endl;
-    }
+    if(ind == i)
+        cout << "Can't go that way" << endl;
+    else
+        cout << nowRoom -> description << endl;
+}
 
-}*/
-
-/*void view_inventory(){
+void view_inventory(){
     int i = inventory.size();
     if(!i){
         cout << "Inventory: empty" << endl;
         return;
     }
     cout << "Inventory: ";
-    int j = 0;
-    for(j = 0; j < i-1; j++){
-        cout << inventory[j] << ", ";
+    int ind = 0;
+    while(ind < i - 1) {
+        cout << inventory[ind] << ", ";
+        ind++;
     }
-    cout << inventory[j] << endl;
-}*/
+    cout << inventory[ind] << endl;
+}
+
+void take(string input){
+    int i,j,k;
+    for(i = 0; i < (nowRoom -> item).size(); i++){
+        if(nowRoom -> item[i] == input){
+            inventory.push_back(input);
+            (nowRoom -> item).erase((nowRoom -> item).begin() + i);
+            cout << "Item " << input << " added to inventory." << endl;
+            return;
+        }
+    }
+
+    for(i = 0; i < (nowRoom -> container).size(); i++){
+        string container_name = nowRoom->container[i];
+        for(j = 0; j < container_list.size(); j++){
+            if(container_list[j]->name == container_name &&
+               container_list[j]->status == "unlocked"){
+                for(k = 0; k < container_list[j]->item.size();k++){
+                    if(container_list[j]->item[k] == input){
+                        (nowRoom -> item).push_back(container_list[j] -> item[k]);
+                        container_list[j] -> item.erase(container_list[j]->item.begin()+k);
+                        take(input);
+                        return;
+                    }
+                }
+            }
+        }
+    }
+    cout << "Error" << endl;
+}
+
+void drop(string input){
+    int i = 0;
+    while(i < inventory.size()) {
+        if(inventory[i] == input){
+            (nowRoom -> item).push_back(input);
+            inventory.erase(inventory.begin() + i);
+            cout << input << " dropped." << endl;
+            return;
+        }
+        i++;
+    }
+    cout << "Error" << endl;
+}
+
+void read(string input){
+    int i = 0;
+    int j;
+    while(i < inventory.size()) {
+        if(inventory[i] == input){
+            j = 0;
+            while(j < item_list.size()) {
+                if(item_list[j] -> name == input){
+                    if(item_list[j] -> writing.size() == 0)
+                        cout << "Nothing written." << endl;
+                    else
+                        cout << item_list[j] -> writing << endl;
+                }
+                j++;
+            }
+            return;
+        }
+        i++;
+    }
+    cout << "Error" << endl;
+}
+
+void put(string a, string b){
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    while(i < inventory.size()) {
+        if(inventory[i] == a){
+            if(nowRoom -> name == b){
+                drop(a);
+                return;
+            }
+            j = 0;
+            while(j < nowRoom->container.size()) {
+                if(nowRoom -> container[j] == b) { break; }
+                j++;
+            }
+            if(j == nowRoom -> container.size()){
+                cout<<"Error"<<endl;
+                return;
+            }
+            j = 0;
+            while(j < container_list.size()) {
+                if(container_list[j] -> name == b){
+                    if(container_list[j]->accept.size() == 0){
+                        container_list[j] -> item.push_back(a);
+                        inventory.erase(inventory.begin() + i);
+                        cout << "Item " << a << " added to "<< b << "." << endl;
+                        if(container_list[j]->status == ""){
+                            container_list[j]->status = "unlocked";
+                        }
+                        return;
+                    }
+                    k = 0;
+                    while(k < container_list[j]->accept.size()) {
+                        if(container_list[j] -> accept[k] == a){
+                            container_list[j] -> item.push_back(a);
+                            inventory.erase(inventory.begin() + i);
+                            cout << "Item " << a << " added to "<< b << "." << endl;
+                            if(container_list[j]->status == ""){
+                                container_list[j]->status = "unlocked";
+                            }
+                            return;
+                        }
+                        k++;
+                    }
+                    cout << b << " doesn't accept " << a << endl;
+                    return;
+                }
+                j++;
+            }
+            return;
+        }
+        i++;
+    }
+    cout << "Error"<<endl;
+}
+
+void Activate(string input){
+    int i = 0;
+    int j = 0;
+    while(i < inventory.size()) {
+        if(inventory[i] == input){
+            j = 0;
+            while(j < item_list.size()) {
+                if(item_list[j] -> name == input){
+                    if(item_list[j] -> ifturnon == false){
+                        cout<<"Item is not able to be turned on." << endl;
+                    } else {
+                        cout<<"You activate the "<< item_list[j]->name<<"."<<endl;
+                        cout << item_list[j] -> turnon.print << endl;
+                        switchAck(item_list[j] -> turnon.action);
+                    }
+                }
+                j++;
+            }
+            return;
+        }
+        i++;
+    }
+    cout << "Error" << endl;
+}
+
+void open(string input){
+    int var = 0;
+    while(var < nowRoom->container.size()) {
+        if(nowRoom -> container[var] == input){ break; }
+        var++;
+    }
+    if(var == nowRoom -> container.size()){
+        cout << "Error" << endl;
+        return;
+    }
+    int i = 0;
+    while(i < container_list.size()) {
+        if(container_list[i] -> name == input){
+            if(container_list[i] -> status == "locked"){
+                cout << container_list[i] -> name << " is locked." << endl;
+                return;
+            }
+            if((container_list[i] -> item).size() == 0){
+                cout <<container_list[i] -> name << " is empty." << endl;
+                return;
+            }
+            container_list[i] -> status = "unlocked";
+            cout << container_list[i] -> name << " contains ";
+            int j = 0;
+            while(j < (container_list[i] -> item).size() - 1) {
+                cout << container_list[i] -> item[j] << ", ";
+                j++;
+            }
+            cout << container_list[i] -> item[j] << "." << endl;
+            return;
+        }
+        i++;
+    }
+}
+
+void exit() {
+    if(nowRoom -> type == "exit"){
+        Gameover();
+        return;
+    }
+    cout << "Error" << endl;
+}
+
+void attack(string creature, string weapon){
+    int i = 0;
+    int j = 0;
+    while(i < nowRoom->creature.size()) {
+        if(nowRoom -> creature[i] == creature) { break; }
+        i++;
+    }
+    if(i == nowRoom -> creature.size()){
+        cout << "Error" << endl;
+        return;
+    }
+    i = 0;
+    while(i < inventory.size()) {
+        if(inventory[i] == weapon) { break; }
+        i++;
+    }
+    if(i == inventory.size()){
+        cout << "Error" << endl;
+        return;
+    }
+    i = 0;
+    while(i < creature_list.size()) {
+        if(creature_list[i]->name == creature){ break; }
+        i++;
+    }
+    j = 0;
+    while(j < creature_list[i]->vulnerability.size()) {
+        if(creature_list[i]->vulnerability[j] == weapon){
+            cout << "You assault the " << creature << " with the " << weapon << "." << endl;
+            break;
+        }
+        j++;
+    }
+    if(j == creature_list[i]->vulnerability.size()) {
+        cout << "Error" << endl;
+        return;
+    }
+    if(creature_list[i]->attack == NULL) {
+        return;
+    }
+    if(creature_list[i]->attack->triggerCondition){
+        string object = creature_list[i]->attack->condition.object;
+        string status = creature_list[i]->attack->condition.status;
+        bool itemFound = false;
+        bool itemMatch = false;
+        j = 0;
+        while(j < item_list.size()) {
+            if(item_list[j]->name == object){
+                itemFound = true;
+                itemMatch = item_list[j]->status == status;
+                break;
+            }
+            j++;
+        }
+        if(!itemFound) {
+            j = 0;
+            while(j < room_list.size()) {
+                if(room_list[j]->name == object){
+                    itemFound = true;
+                    itemMatch = room_list[j]->status == status;
+                    break;
+                }
+                j++;
+            }
+        }
+        if(!itemFound) {
+            j = 0;
+            while(j < container_list.size()) {
+                if(container_list[j]->name == object){
+                    itemFound = true;
+                    itemMatch = container_list[j]->status == status;
+                    break;
+                }
+                j++;
+            }
+        }
+        if(!itemFound) {
+            j = 0;
+            while(j < creature_list.size()) {
+                if(creature_list[j]->name == object){
+                    itemFound = true;
+                    itemMatch = creature_list[j]->status == status;
+                    break;
+                }
+                j++;
+            }
+        }
+        if(!itemMatch) {
+            cout << "Error" << endl;
+            return;
+        }
+    }
+    if(creature_list[i]->attack->triggerPrint){
+        cout << "2You assault the " << creature << " with the " << weapon << "." << endl;
+        cout << creature_list[i]->attack->print<<endl;
+    }
+    if(creature_list[i]->attack->triggerAction){
+        for(j = 0; j<creature_list[i]->attack->action.size();j++){
+            switchAck(creature_list[i]->attack->action[j]);
+        }
+    }
+}
+
+void parse_input(string input) {
+    if(input == "s" || input == "w" || input == "n" || input == "e") {
+        next_room(input);
+        return;
+    }
+    if(input == "take") {
+        cout<<"What do you want to take? ";
+        getline(cin, input);
+        take(input);
+        return;
+    }
+    if(input == "i") {
+        view_inventory();
+        return;
+    }
+    if(input.find("take") != string::npos){
+        input.erase(0,5);
+        take(input);
+        return;
+    }
+    if(input.find("drop") != string::npos){
+        input.erase(0,5);
+        drop(input);
+        return;
+    }
+
+    if(input == "drop") {
+        cout<<"What do you want to drop? ";
+        getline(cin, input);
+        drop(input);
+        return;
+    }
+    if(input == "read") {
+        cout<<"What do you want to read? ";
+        getline(cin, input);
+        read(input);
+        return;
+    }
+    if(input.find("read") != string::npos){
+        input.erase(0,5);
+        read(input);
+        return;
+    }
+    if(input == "open") {
+        cout<<"What do you want to open? ";
+        getline(cin, input);
+        if(input == "exit"){
+            exit();
+            return;
+        }
+        open(input);
+        return;
+    }
+    if(input.find("open") != string::npos){
+        input.erase(0,5);
+        if(input == "exit"){
+            exit();
+            return;
+        }
+        open(input);
+        return;
+    }
+    if(input.find("put") != string::npos){
+        input.erase(0,4);
+        int space_pos = input.find(" ");
+        string put_item = input.substr(0, space_pos);
+        input.erase(0, space_pos + 4);
+        string put_into = input;
+        put(put_item, put_into);
+        return;
+    }
+    if(input == "put") {
+        cout << "What do you want to put? ";
+        getline(cin, input);
+        string put_item = input;
+        cout << "Where do you want to put in? ";
+        getline(cin, input);
+        string put_into = input;
+        put(put_item, put_into);
+        return;
+    }
+    if(input == "turn on") {
+        cout<<"What do you want to turn on? ";
+        getline(cin, input);
+        Activate(input);
+        return;
+    }
+    if(input.find("turn on") != string::npos){
+        input.erase(0,8);
+        Activate(input);
+        return;
+    }
+    if(input == "attack") {
+        cout << "What do you want to attack? ";
+        getline(cin, input);
+        string monster = input;
+        cout << "What do you want to attack with? ";
+        getline(cin, input);
+        string weapon = input;
+        attack(monster, weapon);
+        return;
+    }
+    if(input.find("attack") != string::npos){
+        input.erase(0,7);
+        int space_pos = input.find(" ");
+        string monster = input.substr(0, space_pos);
+        input.erase(0, space_pos + 6);
+        string weapon = input;
+        attack(monster, weapon);
+        return;
+    }
+    cout << "Error" << endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+string getObjectType(string ob){
+   // cout << "name of input object is " << ob << endl;
+    int i = 0;
+    for( i = 0; i<room_list.size(); i++ ){
+        if((room_list[i])->name == ob){
+            //cout << "Room" << endl;
+            return "Room";
+
+        }
+    }
+    i = 0;
+    for(i = 0; i<item_list.size(); i++){
+        if((item_list[i])->name == ob){
+            //cout << "Item" << endl;
+            return "Item";
+
+        }
+    }
+    i = 0;
+    for(i = 0; i<container_list.size(); i++ ){
+        if((container_list[i])->name == ob){
+            //cout << "Container" << endl;
+            return "Container";
+
+        }
+    }
+    i = 0;
+    for(i = 0; i<creature_list.size(); i++ ){
+        if((creature_list[i])->name == ob){
+            //cout << "Creature" << endl;
+            return "Creature";
+
+        }
+    }
+    //cout << "NULL" << endl;
+    return NULL;
+
+}
+
+
+
 
 bool trig_own(Trigger* t){
     string owner = t->owner.owner;
     string has = t->owner.has;
     string object = t->owner.object;
-    int i = 0;
+    int i;
     int j;
     int k;
+    i = 0;
     if(owner == "inventory"){
         //cout << "lol" << endl;
         for(i = 0; i < inventory.size(); i++) {
@@ -725,7 +1329,9 @@ bool trig_own(Trigger* t){
             }
         }
     }
+    //cout << " see if run to this line in trig_own" << endl;
     string ownerType = getObjectType(owner);
+    //cout << "call getObjectType in trig_own" << endl;
     string objType = getObjectType(object);
     if(ownerType == "Room"){
         i = 0;
@@ -893,9 +1499,13 @@ bool trig_own(Trigger* t){
 bool trig_stat(Trigger* t){
     string object = t->status.object;
     string status = t->status.status;
+    //cout << "print: " << t->print << endl;
+    //cout << "object: " << object << endl;
     int i;
     int j;
+    //cout << "see if runs to this line in trig_stat" << endl;
     string objType = getObjectType(object);
+    //cout << "call getObjectType in trig_stat" << endl;
     if(objType == "Room"){
         i = 0;
         for(i = 0; i < room_list.size(); i++){
@@ -995,10 +1605,10 @@ bool checkTrigNoArg(){
             t = nowRoom->trigger[j];
             if(!t->has_command){
                 if(t->type == "permanent" ||(t->type == "single" && t->times == 0)){
-                    if(t->condition == false){
+                    if(t->condition == 3){
                         roomOut = trig_own(t);
                     }
-                    else if(t->condition == true){
+                    else if(t->condition == 2){
                         roomOut = trig_stat(t);
                     }
                     if(roomOut == true){
@@ -1019,10 +1629,10 @@ bool checkTrigNoArg(){
                     t = item_list[j]->trigger[k];
                     if(!t->has_command){
                         if(t->type == "permanent" || (t->type == "single" &&t -> times == 0)){
-                            if(t->condition == false){
+                            if(t->condition == 3){
                                 itemOut = trig_own(t);
                             }
-                            else if(t->condition == true){
+                            else if(t->condition == 2){
                                 itemOut = trig_stat(t);
                             }
                             if(itemOut == true){
@@ -1038,18 +1648,22 @@ bool checkTrigNoArg(){
     i = 0;
     for(i = 0; i < nowRoom->container.size(); i++){
         string target = nowRoom->container[i];
+        //cout << "The container 's name in the room is (target)" << target<<endl;
         j = 0;
         for(j = 0; j < container_list.size(); j++){
             if(container_list[j]->name == target){
+                //cout << "The container 's name in the room is (target)" << target<<endl;
                 k = 0;
                 while(k < container_list[j]->trigger.size()){
                     t = container_list[j]->trigger[k];
+                    //cout << "t: " << t->print;
+                    //cout << t->has_command << endl;
                     if(!t->has_command){
                         if(t->type == "permanent" || (t->type == "single" && t->times == 0)){
-                            if(t->condition == true){
+                            if(t->condition == 3){
                                 containerOut = trig_own(t);
                             }
-                            else if(t->condition == false){
+                            else if(t->condition == 2){
                                 containerOut = trig_stat(t);
                             }
                             if(containerOut == true){
@@ -1073,10 +1687,10 @@ bool checkTrigNoArg(){
                     t = creature_list[j]->trigger[k];
                     if(!t->has_command){
                         if(t->type == "permanent" || (t->type == "single" && t->times == 0)){
-                            if(t->condition == false){
+                            if(t->condition == 3){
                                 creatureOut =  trig_own(t);
                             }
-                            else if(t->condition == true){
+                            else if(t->condition == 2){
                                 creatureOut = trig_stat(t);
                             }
                             if(creatureOut == true){
@@ -1107,13 +1721,14 @@ bool checkTrigArg(string input){
             t = nowRoom->trigger[j];
             if(t->has_command && input == t->command){
                 if(t->type == "permanent" || (t->type == "single" && t->times == 0)){
-                    if(t->condition == false){
+                    if(t->condition == 3){
                         roomOut = trig_own(t);
                     }
-                    else if(t->condition == true){
+                    else if(t->condition == 2){
                         roomOut = trig_stat(t);
                     }
                     if(roomOut == true){
+                       // cout << "roomOut is:" << roomOut << endl;
                         t->times++;
                     }
                 }
@@ -1131,10 +1746,10 @@ bool checkTrigArg(string input){
                     t = item_list[j]->trigger[k];
                     if(t->has_command && input == t->command){
                         if(t->type == "permanent"||(t->type == "single" && t->times == 0)){
-                            if(t->condition == false){
+                            if(t->condition == 3){
                                 itemOut = trig_own(t);
                             }
-                            else if(t->condition == true){
+                            else if(t->condition == 2){
                                 itemOut = trig_stat(t);
                             }
                             if(itemOut == true){
@@ -1157,10 +1772,10 @@ bool checkTrigArg(string input){
                     t = container_list[j]->trigger[k];
                     if(t->has_command && input == t->command){
                         if(t->type == "permanent" || (t->type == "single" && t->times == 0)){
-                            if(t->condition == false){
+                            if(t->condition == 3){
                                 containerOut = trig_own(t);
                             }
-                            else if(t->condition == true){
+                            else if(t->condition == 2){
                                 containerOut = trig_stat(t);
                             }
                             if(containerOut == true){
@@ -1183,10 +1798,10 @@ bool checkTrigArg(string input){
                     t = creature_list[j]->trigger[k];
                     if(t->has_command && input == t->command){
                         if(t->type == "permanent" || ( t->type =="single" &&t->times == 0)){
-                            if(t->condition == false){
+                            if(t->condition == 3){
                                 creatureOut = trig_own(t);
                             }
-                            else if(t->condition == true){
+                            else if(t->condition == 2){
                                 creatureOut = trig_stat(t);
                             }
                             if(creatureOut == true){

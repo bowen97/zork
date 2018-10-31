@@ -3,127 +3,83 @@
 //
 #define DEBUG 0
 #include "trigger.h"
-Trigger::Trigger(xml_node<> *node) {
-    times=0;
-    type="single";
-    has_command=false;
+#include "header.h"
+
+Trigger::Trigger(xml_node<>* node) {
+    setupTrigger(node);
+}
+
+void Trigger::setupTrigger(xml_node<>* node) {
+    has_print = false;
     has_action= false;
-    has_print= false;
+    has_command = false;
 
-    xml_node<>* kid=node->first_node();
-    while(kid){
-        if(!strcmp(kid->name(),"print")){
-            has_print=true;
-            print=kid->value();
-            if(DEBUG) {
-                cout << kid->name() << endl;
-                cout << print << endl;
-                cout << endl;
+    type = "single";
+    times = 0;
+    xml_node<>* child = node -> first_node();
+    while(child) {
+        if(!strcmp(child->name(), "print")) {
+            has_print = true;
+            print = child->value();
+        }
+        if(!strcmp(child->name(), "action")) {
+            has_action = true;
+            action.push_back(child->value());
+        }
+        if(!strcmp(child->name(), "type")) {
+            type = child->value();
+        }
+        if(!strcmp(child->name(), "command")) {
+            has_command = true;
+            command = child->value();
+        }
+        if(!strcmp(child->name(), "condition")) {
+            condition = condition_count(child);
+            if(condition == 3) {
+
+                setupOwner(child);
+            }
+            else if(condition == 2){
+                setupStatus(child);
             }
         }
-        else if(!strcmp(kid->name(),"type")){
-            type=kid->value();
-            if(DEBUG) {
-                cout << kid->name() << endl;
-                cout << type << endl;
-                cout << endl;
-            }
-        }
-        else if(!strcmp(kid->name(),"action")){
-            has_action=true;
-            action.push_back(kid->value());
-            if(DEBUG) {
-                cout << kid->name() << endl;
-                for (int i = 0; i < action.size(); i++) {
-                    cout << action[i] << endl;
-                }
-                cout << endl;
-            }
-        }
-        else if(!strcmp(kid->name(),"command")){
-            has_command=true;
-            command=kid->value();
-
-            if(DEBUG) {
-                cout << kid->name() << endl;
-                cout << command << endl;
-                cout << endl;
-            }
-        }
-        else if(!strcmp(kid->name(),"condition")){
-
-            if(condition_det(kid)){//status
-                if(DEBUG) {
-                    cout << kid->name() << endl;
-                }
-                for(xml_node<>*temp=kid->first_node();temp;temp=temp->next_sibling()){
-                    if(!strcmp(temp->name(),"status")){
-                        status.status=temp->value();
-                        if(DEBUG) {
-                            cout << temp->name() << endl;
-                            cout << status.status << endl;
-                            cout << endl;
-                        }
-                    }
-                    if(!strcmp(temp->name(),"object")){
-                        status.object=temp->value();
-                        if(DEBUG) {
-                            cout << temp->name() << endl;
-                            cout << status.object << endl;
-                            cout << endl;
-                        }
-                    }
-                }
-
-            }
-            else{//owner
-                if(DEBUG) {
-                    cout << kid->name() << endl;
-                }
-                for(xml_node<>*temp=kid->first_node();temp;temp=temp->next_sibling()){
-                    if(!strcmp(temp->name(),"has")){
-                        owner.has=temp->value();
-                        if(DEBUG) {
-                            cout << temp->name() << endl;
-                            cout << owner.has << endl;
-                            cout << endl;
-                        }
-                    }
-                    if(!strcmp(temp->name(),"owner")){
-                        owner.owner=temp->value();
-                        if(DEBUG) {
-                            cout << temp->name() << endl;
-                            cout << owner.owner << endl;
-                            cout << endl;
-                        }
-                    }
-                    if(!strcmp(temp->name(),"object")) {
-                        owner.object = temp->value();
-                        if (DEBUG) {
-                            cout << temp->name() << endl;
-                            cout << owner.object << endl;
-                            cout << endl;
-                        }
-                    }
-                }
-
-            }
-        }
-
-        kid=kid->next_sibling();
-
+        child = child -> next_sibling();
     }
 }
 
-bool Trigger::condition_det(xml_node<> *node) {
-    int count=0;
-    for(xml_node<>* kid=node->first_node();kid;kid=kid->next_sibling()){
-        count++;
+int Trigger::condition_count(xml_node<>* node) {
+    int conditionNumber = 0;
+    for(xml_node<>* child = node -> first_node(); child; child = child -> next_sibling()){
+        conditionNumber++;
     }
-    if(count==2){ //status
-        return true;
+    return conditionNumber;
+}
+
+void Trigger::setupOwner(xml_node<>* node) {
+    xml_node<>* child = node -> first_node();
+    while(child) {
+        if(!strcmp(child->name(), "has")) {
+            owner.has = child->value();
+        }
+        if(!strcmp(child->name(), "owner")) {
+            owner.owner = child->value();
+        }
+        if(!strcmp(child->name(), "object")) {
+            owner.object = child->value();
+        }
+        child = child -> next_sibling();
     }
-    else if (count==3){//owner
-        return false;
+}
+
+void Trigger::setupStatus(xml_node<>* node) {
+    xml_node<>* child = node -> first_node();
+    while(child) {
+        if(!strcmp(child->name(), "status")) {
+            status.status = child->value();
+        }
+        if(!strcmp(child->name(), "object")) {
+            status.object = child->value();
+        }
+        child = child -> next_sibling();
     }
 }

@@ -26,7 +26,7 @@ public:
     Status status;
     Owner owner;
     vector<string> action;
-    bool condition;//0 is owner 1 is status
+    int condition;//0 is owner 1 is status
     bool has_command;
     bool has_print;
     bool has_action;
@@ -34,7 +34,11 @@ public:
     virtual ~Trigger(){};
     int times;
 private:
-    bool condition_det(xml_node<>* node);
+private:
+    void setupTrigger(xml_node<>* node);
+    int condition_count(xml_node<>* node);
+    void setupOwner(xml_node<>* node);
+    void setupStatus(xml_node<>* node);
 
 };
 

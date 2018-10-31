@@ -35,6 +35,7 @@ Attack::Attack(xml_node<>* node){
         }
         if(!strcmp(kid->name(), "action")){
             triggerAction = true;
+            string buffer = kid -> value();
             action.push_back(kid->value());
         }
 
