@@ -191,10 +191,12 @@ void attack(string monster, string weapon){
     }
     it = find(creature_list[m_i]->vulnerability.begin(),creature_list[m_i]->vulnerability.end(),weapon);
     if(it != creature_list[m_i]->vulnerability.end()){
-        cout<<"You assault the "<< monster<<" with the "<< weapon<<"."<<endl;
+        //cout<<"You assault the "<< monster<<" with the "<< weapon<<"."<<endl;
+        int z=0;
     }
     else{
         cout<<monster<<" cannot be killed by "<<weapon<<"."<<endl;
+        return;
     }
     if(creature_list[m_i]->attack==NULL){
         return;
@@ -246,14 +248,14 @@ void attack(string monster, string weapon){
 
     }
     if(creature_list[m_i]->attack->triggerPrint){
-        cout << "2You assault the " << monster << " with the " << weapon << "." << endl;
+        cout << "You assault the " << monster << " with the " << weapon << "." << endl;
         cout << creature_list[m_i]->attack->print<<endl;
     }
 
     if(creature_list[m_i]->attack->triggerAction){
+
         for(int j = 0; j<creature_list[m_i]->attack->action.size();j++){
-            // switchAck(creature_list[m_i]->attack->action[j]);
-            cout<<"";
+             switchAck(creature_list[m_i]->attack->action[j]);
 
         }
     }
@@ -373,7 +375,7 @@ void open(string input){
 
 void exit(){
     if(nowRoom->type=="exit"){
-        cout << "exit1" << endl;
+
         Gameover();
         return;
     }
