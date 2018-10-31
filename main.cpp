@@ -68,7 +68,7 @@ int main(int argc, char*argv[]){
         //cout<<"maybe"<<endl;
         override = checkTrigNoArg();
         //cout << "gamefinish1" << endl;
-        if(endGame){ break;}
+        if(GameFinish){ break;}
         //cout << override << endl;
         if(override){ continue; }
         getline(cin, input);
@@ -77,12 +77,12 @@ int main(int argc, char*argv[]){
         }
         override = checkTrigArg(input);
         //cout << "gamefinish2" << endl;
-        if(endGame){break;}
+        if(GameFinish){break;}
         if(override){ continue; }
         //cout << "gamefinish4: "<<GameFinish << endl;
         check_input(input);
         //cout << "gamefinish3: " <<GameFinish<< endl;
-        if(endGame) {break;}
+        if(GameFinish) {break;}
     }
 
     return 0;

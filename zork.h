@@ -191,8 +191,8 @@ void attack(string monster, string weapon){
     }
     it = find(creature_list[m_i]->vulnerability.begin(),creature_list[m_i]->vulnerability.end(),weapon);
     if(it != creature_list[m_i]->vulnerability.end()){
-        //cout<<"You assault the "<< monster<<" with the "<< weapon<<"."<<endl;
-        int z=0;
+        cout<<"You assault the "<< monster<<" with the "<< weapon<<"."<<endl;
+
     }
     else{
         cout<<monster<<" cannot be killed by "<<weapon<<"."<<endl;
@@ -242,7 +242,7 @@ void attack(string monster, string weapon){
             }
         }
         if(!flag2){
-            cout<<"Error"<<endl;
+            cout<<"Nothing happened"<<endl;
             return;
         }
 
@@ -381,6 +381,7 @@ void exit(){
         return;
     }
     else {
+
         cout << "Error" << endl;
     }
 }
@@ -415,6 +416,7 @@ void drop(string input){
 
     }
     else{
+
         cout<<"Error"<< endl;
     }
 
@@ -432,13 +434,16 @@ void take(string input){
         }
     }
     for(int i=0; i<(nowRoom->container).size();i++){
+<<<<<<< HEAD
 //        cout<<"container: "<<nowRoom->container[i]<<endl;
         if (ifcontaineropen == true){
+=======
+>>>>>>> 3ad2b3ec0acfea063d9587f803527505ce57a7d3
         for(int j=0; j<container_list.size();j++){
-//            cout<<"status:"<<container_list[j]->status<<endl;
+
 
             if(nowRoom->container[i]==container_list[j]->name && container_list[j]->status!="locked"){
-//                cout<<"match and unlock"<<endl;
+                //cout<<"match and unlock"<<endl;
                 for(int k=0; k<container_list[j]->item.size();k++){
                     if(container_list[j]->item[k]==input){
                         inventory.push_back(input);
@@ -455,7 +460,7 @@ void take(string input){
 }
 
 
-bool endGame = false;
+
 
 
 
@@ -597,8 +602,8 @@ void Update(string obj){
 }
 
 void Gameover(){
-    endGame = true;
-    cout << "Victory!" << endl;
+    GameFinish = true;
+
     cout << "Game Over" << endl;
 }
 
