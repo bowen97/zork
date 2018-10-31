@@ -20,7 +20,7 @@ vector<container*> container_list;
 vector<creature*> creature_list;
 Room * nowRoom;
 vector<string> inventory;
-
+bool ifcontaineropen;
 //void check_input(string input); //
 void put(string input_item, string input_container); //
 void turn_on(string input); // activate
@@ -361,6 +361,7 @@ void open(string input){
 
                         }
                         cout << container_list[i]->item[j] << "." << endl;
+                        ifcontaineropen = true;
                         return;
                     }
                 }
@@ -432,6 +433,7 @@ void take(string input){
     }
     for(int i=0; i<(nowRoom->container).size();i++){
 //        cout<<"container: "<<nowRoom->container[i]<<endl;
+        if (ifcontaineropen == true){
         for(int j=0; j<container_list.size();j++){
 //            cout<<"status:"<<container_list[j]->status<<endl;
 
@@ -447,7 +449,7 @@ void take(string input){
                 }
             }
         }
-    }
+    }}
     cout<<"Error"<<endl;
 
 }

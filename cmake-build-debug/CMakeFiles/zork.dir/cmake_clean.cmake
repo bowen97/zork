@@ -7,7 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/zork.dir/room.cpp.o"
   "CMakeFiles/zork.dir/trigger.cpp.o"
   "zork.pdb"
-  "zork"
+  "zork.exe"
+  "libzork.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
