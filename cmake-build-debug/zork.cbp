@@ -144,6 +144,9 @@
 		<Unit filename="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.h">
 			<Option target="zork"/>
 		</Unit>
+		<Unit filename="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/zork.h">
+			<Option target="zork"/>
+		</Unit>
 		<Unit filename="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

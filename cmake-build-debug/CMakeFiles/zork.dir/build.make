@@ -57,44 +57,44 @@ include CMakeFiles/zork.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/zork.dir/flags.make
 
-CMakeFiles/zork.dir/main.cpp.o: CMakeFiles/zork.dir/flags.make
-CMakeFiles/zork.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/zork.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/main.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/main.cpp"
+CMakeFiles/zork.dir/Attack.cpp.o: CMakeFiles/zork.dir/flags.make
+CMakeFiles/zork.dir/Attack.cpp.o: ../Attack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/zork.dir/Attack.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/Attack.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/Attack.cpp"
 
-CMakeFiles/zork.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/main.cpp" > CMakeFiles/zork.dir/main.cpp.i
+CMakeFiles/zork.dir/Attack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/Attack.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/Attack.cpp" > CMakeFiles/zork.dir/Attack.cpp.i
 
-CMakeFiles/zork.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/main.cpp" -o CMakeFiles/zork.dir/main.cpp.s
+CMakeFiles/zork.dir/Attack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/Attack.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/Attack.cpp" -o CMakeFiles/zork.dir/Attack.cpp.s
 
-CMakeFiles/zork.dir/room.cpp.o: CMakeFiles/zork.dir/flags.make
-CMakeFiles/zork.dir/room.cpp.o: ../room.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/zork.dir/room.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/room.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/room.cpp"
+CMakeFiles/zork.dir/container.cpp.o: CMakeFiles/zork.dir/flags.make
+CMakeFiles/zork.dir/container.cpp.o: ../container.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/zork.dir/container.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/container.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/container.cpp"
 
-CMakeFiles/zork.dir/room.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/room.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/room.cpp" > CMakeFiles/zork.dir/room.cpp.i
+CMakeFiles/zork.dir/container.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/container.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/container.cpp" > CMakeFiles/zork.dir/container.cpp.i
 
-CMakeFiles/zork.dir/room.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/room.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/room.cpp" -o CMakeFiles/zork.dir/room.cpp.s
+CMakeFiles/zork.dir/container.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/container.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/container.cpp" -o CMakeFiles/zork.dir/container.cpp.s
 
-CMakeFiles/zork.dir/trigger.cpp.o: CMakeFiles/zork.dir/flags.make
-CMakeFiles/zork.dir/trigger.cpp.o: ../trigger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/zork.dir/trigger.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/trigger.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.cpp"
+CMakeFiles/zork.dir/creature.cpp.o: CMakeFiles/zork.dir/flags.make
+CMakeFiles/zork.dir/creature.cpp.o: ../creature.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/zork.dir/creature.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/creature.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/creature.cpp"
 
-CMakeFiles/zork.dir/trigger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/trigger.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.cpp" > CMakeFiles/zork.dir/trigger.cpp.i
+CMakeFiles/zork.dir/creature.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/creature.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/creature.cpp" > CMakeFiles/zork.dir/creature.cpp.i
 
-CMakeFiles/zork.dir/trigger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/trigger.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.cpp" -o CMakeFiles/zork.dir/trigger.cpp.s
+CMakeFiles/zork.dir/creature.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/creature.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/creature.cpp" -o CMakeFiles/zork.dir/creature.cpp.s
 
 CMakeFiles/zork.dir/item.cpp.o: CMakeFiles/zork.dir/flags.make
 CMakeFiles/zork.dir/item.cpp.o: ../item.cpp
@@ -109,65 +109,65 @@ CMakeFiles/zork.dir/item.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/item.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/item.cpp" -o CMakeFiles/zork.dir/item.cpp.s
 
-CMakeFiles/zork.dir/container.cpp.o: CMakeFiles/zork.dir/flags.make
-CMakeFiles/zork.dir/container.cpp.o: ../container.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/zork.dir/container.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/container.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/container.cpp"
+CMakeFiles/zork.dir/main.cpp.o: CMakeFiles/zork.dir/flags.make
+CMakeFiles/zork.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/zork.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/main.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/main.cpp"
 
-CMakeFiles/zork.dir/container.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/container.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/container.cpp" > CMakeFiles/zork.dir/container.cpp.i
+CMakeFiles/zork.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/main.cpp" > CMakeFiles/zork.dir/main.cpp.i
 
-CMakeFiles/zork.dir/container.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/container.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/container.cpp" -o CMakeFiles/zork.dir/container.cpp.s
+CMakeFiles/zork.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/main.cpp" -o CMakeFiles/zork.dir/main.cpp.s
 
-CMakeFiles/zork.dir/creature.cpp.o: CMakeFiles/zork.dir/flags.make
-CMakeFiles/zork.dir/creature.cpp.o: ../creature.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/zork.dir/creature.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/creature.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/creature.cpp"
+CMakeFiles/zork.dir/room.cpp.o: CMakeFiles/zork.dir/flags.make
+CMakeFiles/zork.dir/room.cpp.o: ../room.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/zork.dir/room.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/room.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/room.cpp"
 
-CMakeFiles/zork.dir/creature.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/creature.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/creature.cpp" > CMakeFiles/zork.dir/creature.cpp.i
+CMakeFiles/zork.dir/room.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/room.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/room.cpp" > CMakeFiles/zork.dir/room.cpp.i
 
-CMakeFiles/zork.dir/creature.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/creature.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/creature.cpp" -o CMakeFiles/zork.dir/creature.cpp.s
+CMakeFiles/zork.dir/room.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/room.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/room.cpp" -o CMakeFiles/zork.dir/room.cpp.s
 
-CMakeFiles/zork.dir/Attack.cpp.o: CMakeFiles/zork.dir/flags.make
-CMakeFiles/zork.dir/Attack.cpp.o: ../Attack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/zork.dir/Attack.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/Attack.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/Attack.cpp"
+CMakeFiles/zork.dir/trigger.cpp.o: CMakeFiles/zork.dir/flags.make
+CMakeFiles/zork.dir/trigger.cpp.o: ../trigger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/zork.dir/trigger.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zork.dir/trigger.cpp.o -c "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.cpp"
 
-CMakeFiles/zork.dir/Attack.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/Attack.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/Attack.cpp" > CMakeFiles/zork.dir/Attack.cpp.i
+CMakeFiles/zork.dir/trigger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zork.dir/trigger.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.cpp" > CMakeFiles/zork.dir/trigger.cpp.i
 
-CMakeFiles/zork.dir/Attack.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/Attack.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/Attack.cpp" -o CMakeFiles/zork.dir/Attack.cpp.s
+CMakeFiles/zork.dir/trigger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zork.dir/trigger.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.cpp" -o CMakeFiles/zork.dir/trigger.cpp.s
 
 # Object files for target zork
 zork_OBJECTS = \
-"CMakeFiles/zork.dir/main.cpp.o" \
-"CMakeFiles/zork.dir/room.cpp.o" \
-"CMakeFiles/zork.dir/trigger.cpp.o" \
-"CMakeFiles/zork.dir/item.cpp.o" \
+"CMakeFiles/zork.dir/Attack.cpp.o" \
 "CMakeFiles/zork.dir/container.cpp.o" \
 "CMakeFiles/zork.dir/creature.cpp.o" \
-"CMakeFiles/zork.dir/Attack.cpp.o"
+"CMakeFiles/zork.dir/item.cpp.o" \
+"CMakeFiles/zork.dir/main.cpp.o" \
+"CMakeFiles/zork.dir/room.cpp.o" \
+"CMakeFiles/zork.dir/trigger.cpp.o"
 
 # External object files for target zork
 zork_EXTERNAL_OBJECTS =
 
+zork: CMakeFiles/zork.dir/Attack.cpp.o
+zork: CMakeFiles/zork.dir/container.cpp.o
+zork: CMakeFiles/zork.dir/creature.cpp.o
+zork: CMakeFiles/zork.dir/item.cpp.o
 zork: CMakeFiles/zork.dir/main.cpp.o
 zork: CMakeFiles/zork.dir/room.cpp.o
 zork: CMakeFiles/zork.dir/trigger.cpp.o
-zork: CMakeFiles/zork.dir/item.cpp.o
-zork: CMakeFiles/zork.dir/container.cpp.o
-zork: CMakeFiles/zork.dir/creature.cpp.o
-zork: CMakeFiles/zork.dir/Attack.cpp.o
 zork: CMakeFiles/zork.dir/build.make
 zork: CMakeFiles/zork.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable zork"

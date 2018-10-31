@@ -6,15 +6,27 @@
 
 #IncludeRegexTransform: 
 
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/Attack.cpp
+Attack.h
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/Attack.h
+
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/Attack.h
 header.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/header.h
+
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/container.cpp
+container.h
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/container.h
 
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/container.h
 header.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/header.h
 trigger.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.h
+
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/creature.cpp
+creature.h
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/creature.h
 
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/creature.h
 header.h
@@ -45,8 +57,12 @@ rapidxml-1.13/rapidxml_utils.hpp
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/rapidxml-1.13/rapidxml_utils.hpp
 string.h
 -
-iterator
--
+algorithm
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/algorithm
+
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/item.cpp
+item.h
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/item.h
 
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/item.h
 header.h
@@ -71,8 +87,6 @@ creature.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/creature.h
 zork.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/zork.h
-zork.cpp
-/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/zork.cpp
 
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/rapidxml-1.13/rapidxml.hpp
 cstdlib
@@ -104,25 +118,31 @@ fstream
 stdexcept
 -
 
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/room.cpp
+room.h
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/room.h
+
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/room.h
 header.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/header.h
 trigger.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.h
 
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.cpp
+trigger.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.h
 header.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/header.h
 
-/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/zork.cpp
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/trigger.h
 header.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/header.h
-zork.h
-/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/zork.h
 
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/zork.h
 header.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/header.h
+zork.h
+/Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/zork.h
 room.h
 /Users/bowen/Library/Mobile Documents/com~apple~CloudDocs/college/senior 1/ECE 30862/zork/room.h
 item.h
